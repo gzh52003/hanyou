@@ -14,6 +14,7 @@ module.exports = override(
     '@network': path.resolve(__dirname, 'src/network'),
     '@utils': path.resolve(__dirname, 'src/utils'),
     '@views': path.resolve(__dirname, 'src/views'),
+    '@assets': path.resolve(__dirname, 'src/assets'),
   }), // 添加路径别名
 
   // ui框架按需加载

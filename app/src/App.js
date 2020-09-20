@@ -72,7 +72,7 @@ class App extends React.Component {
     const { current, meneList } = this.state
     return (
       <div className="App">
-        <div className="tab_menu ">
+        <div className="tab_menu">
           <div className="line"></div>
           <Tabs defaultActiveKey={current} onChange={this.callback}>
             {

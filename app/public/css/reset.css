@@ -149,3 +149,7 @@ body {
   display: flex;
   flex-direction: column;
 }
+
+.App {
+  height: 100%;
+}

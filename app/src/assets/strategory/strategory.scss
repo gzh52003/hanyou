@@ -1,0 +1,282 @@
+.sta_page {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+
+  .sta_main {
+    flex: 1;
+
+    .sta_section {
+      padding: 1px 0;
+      margin: .44rem 0;
+      height: 3000px;
+      background: #fff;
+
+      // 新闻
+      .discover_new {
+        position: relative;
+        margin-bottom: .01rem;
+        height: 1.24rem;
+        background: url("./discover_news_bg.png") no-repeat 0 0;
+        background-size: 100% 100%;
+
+        .more {
+          position: absolute;
+          top: 0;
+          right: .15rem;
+          line-height: 24px;
+          font-size: 12px;
+          color: #e74f4f;
+        }
+
+        .discover_con {
+          position: absolute;
+          top: .4rem;
+          left: 0;
+          padding: 0 .12rem 0 .1rem;
+          width: 100%;
+          height: .6rem;
+
+          a {
+            display: block;
+            width: 100%;
+            height: 100%;
+
+            dl {
+              width: 100%;
+              height: 100%;
+              display: flex;
+
+              dt {
+                padding-right: 5px;
+                flex: 1;
+                height: 100%;
+
+                p {
+                  font-size: 16px;
+                  line-height: 21px;
+                  width: 100%;
+                  height: 42px;
+                  color: #333;
+                  overflow: hidden;
+                  display: -webkit-box;
+                  text-overflow: ellipsis;
+                  -webkit-box-orient: vertical;
+                  -webkit-line-clamp: 2;
+                  word-break: break-all;
+                  word-wrap: break-word;
+                }
+
+                .news-bottom {
+                  margin-top: 5px;
+                  display: flex;
+
+                  span {
+                    font-size: 12px;
+                    line-height: 12px;
+                    color: #9c7676;
+
+                    i {
+                      margin-right: 3px;
+                      display: inline-block;
+                      width: 10px;
+                      height: 10px;
+                      border-radius: 100%;
+                      border: 1px solid #9c7676;
+                    }
+                  }
+
+                  em {
+                    display: inline-block;
+                    margin: 0 5px;
+                  }
+
+                  time {
+                    margin-left: .64rem;
+                    font-size: 12px;
+                  }
+
+                  span:nth-of-type(2) {
+                    margin-left: 10px;
+                  }
+                }
+
+              }
+
+              dd {
+                width: .8rem;
+                height: 1005;
+                background: lavenderblush;
+
+                img {
+                  width: 100%;
+                  height: 100%;
+                }
+              }
+
+            }
+          }
+        }
+      }
+
+      //大家知道
+      .discover_know {
+        height: 1.4rem;
+        margin-bottom: 10px;
+
+        .discover_know_title {
+          padding: 0 .07rem;
+          height: .33rem;
+          line-height: .33rem;
+
+          a {
+            height: 100%;
+            display: flex;
+            justify-content: space-between;
+            font-size: 13px;
+          }
+        }
+
+        .discover_know_card {
+          height: 1.07rem;
+
+          ul {
+            padding: 0 .02rem;
+            position: relative;
+            display: flex;
+            justify-content: space-between;
+
+            li {
+              width: .82rem;
+              height: 1.07rem;
+
+              img {
+                width: 100%;
+                height: 100%;
+              }
+
+              span {
+                position: absolute;
+                bottom: 0;
+                height: .21rem;
+                width: .81rem;
+                line-height: .19rem;
+                text-align: center;
+                font-size: 14px;
+                color: #fff;
+              }
+            }
+
+
+          }
+
+        }
+      }
+
+      // 发现更多精彩
+      .discover_know_more {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: .44rem;
+        background: #eee;
+
+        .know_more_line {
+          overflow: hidden;
+          position: absolute;
+          top: .22rem;
+          left: 0;
+          height: 1px;
+          width: 100%;
+          transform: scaleY(.3);
+          background: #ddd;
+        }
+
+        .know_more_box {
+          display: flex;
+          justify-content: center;
+          width: 1.41rem;
+          z-index: 3;
+          background: #eee;
+
+          img {
+            width: .15rem;
+            height: .15rem;
+          }
+
+          span {
+            margin-left: .05rem;
+            font-size: 13px;
+            color: #faa528;
+          }
+        }
+
+      }
+
+      // 主体区域
+      .discover_content {
+        min-height: .9rem;
+        width: 100%;
+        overflow: hidden;
+        background: #eee;
+
+        .discover_content_list {
+          margin-bottom: 10px;
+          display: flex;
+          min-height: .9rem;
+          background: #fff;
+
+          dl {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            min-height: .9rem;
+            width: 20%;
+            border-right: 1px solid #eee;
+
+            dt {
+              margin-bottom: 6px;
+              width: .46rem;
+              height: .36rem;
+              background: orchid;
+            }
+
+            dd {
+              font-size: 13px;
+              color: #c96988;
+              text-align: center;
+            }
+          }
+
+          ul {
+            width: 80%;
+            display: flex;
+            flex-wrap: wrap;
+
+            li {
+              width: 1.495rem;
+              height: .45rem;
+              text-align: center;
+              line-height: .44rem;
+              border-right: 1px solid #eee;
+              border-bottom: 1px solid #eee;
+
+              a {
+                font-size: 13px;
+                padding: 3px 5px;
+                line-height: 1.5em;
+                color: #727272;
+              }
+            }
+
+            li:nth-of-type(2n) {
+              border-right: none;
+            }
+          }
+        }
+      }
+    }
+  }
+}
