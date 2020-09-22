@@ -1,11 +1,148 @@
-circle{
-  position: relative;
+circle {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
 }
-.circle_header{
-  position: relative;
-  top: 0;
+
+// .circle_header {
+//   position: absolute;
+//   top: 0;
+// }
+
+.circle_main {
+  flex: 1;
 }
-.circle_searchBar{
+
+// 输入框
+.circle_searchBar {
+  margin-top: 0.44rem;
+}
+
+.am-search,
+.circle_searchBar {
+  background-color: #fff;
+}
+
+.am-search-input {
+  background-color: #f6f6f6;
+  font-size: 12px;
+  color: #999;
+  border-radius: 0.14rem;
+  height: 0.3rem;
+}
+
+// 更多
+.am-card {
+  padding: 0;
+}
+
+.am-card-header {
+  padding: 0;
+  margin: 0 0.1rem;
+}
+
+.am-card-header-content {
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.am-card-body {
+  padding: 0;
+}
+
+.am-card-header-extra {
+  font-size: 12px;
+  color: #999;
+}
+
+.circle_more {
   position: relative;
-  top: 44px;
+  line-height: 0.45rem;
+  margin-right: 0.2rem;
+
+  svg {
+    position: absolute;
+    height: 0.45rem;
+  }
+}
+
+// recommend
+.circle_list {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 100%;
+  padding-left: 0.12rem;
+
+  li {
+    width: 50%;
+    height: 0.57rem;
+    overflow: hidden;
+
+    a {
+      display: flex;
+
+      img {
+        width: 0.55rem;
+        height: 0.42rem;
+        margin-right: 0.1rem;
+      }
+
+      span {
+        display: inline-block;
+        // width: calc(100% - 80px);
+        margin-top: 0.03rem;
+      }
+    }
+  }
+}
+
+// cricle_everybody
+.cricle_everybody {
+  height: 0.98rem;
+  display: flex;
+  overflow: auto;
+  margin-left: 0.15rem;
+}
+
+.like_scroll {
+  width: 0.9rem;
+  height: 0.98rem;
+  margin-right: 0.1rem;
+
+  .like_img {
+    display: block;
+    width: 0.9rem;
+    height: 0.68rem;
+  }
+
+  p {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+
+    .like_name {
+      width: 0.6rem;
+      font-size: 12px;
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+
+    }
+
+    .like_btn {
+      width: 0.15rem;
+      height: 0.12rem;
+      // background: #ccc;
+      background-image: url('./circle_icon.png');
+      // background-repeat: no-repeat;
+      background-position: -0.19rem 0.43rem;
+      background-size: 1.1rem 0.14rem;
+    }
+  }
+}
+
+//tabs
+.am-tabs-default-bar-tab-active {
+  width: 0.2rem;
 }
