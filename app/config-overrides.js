@@ -20,7 +20,7 @@ module.exports = override(
   fixBabelImports('import', {
     "libraryName": "antd-mobile",
     "libraryDirectory": "es",
-    "style": "css" // `style: true` 会加载 scss 文件
-  }),
+    "style": "css" // `style: true` 会加载 less 文件
+  }), //若是多个 ui框架 就可以在添加  },antd)
   useBabelRc(), //开启 .babelrc 文件
 )
