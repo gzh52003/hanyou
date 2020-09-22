@@ -1,4 +1,4 @@
-import React, { Suspense, lazy } from 'react';
+import React, { Suspense, lazy, useParams } from 'react';
 import logo from './logo.svg';
 import "@/App.scss"
 import { withRouter, Switch, Route } from "react-router-dom"
@@ -6,6 +6,8 @@ import { Menu, Tabs } from 'antd';
 import { HomeOutlined, CustomerServiceOutlined, MessageOutlined, UserOutlined, CompassOutlined } from '@ant-design/icons';
 import store from "./store/index"
 import { connect } from 'react-redux'
+import 'antd-mobile/dist/antd-mobile.css';
+//关于hook
 
 
 import Home from "@views/home/Home"
@@ -54,21 +56,18 @@ class App extends React.Component {
     current: "/home",
   }
 
-  // handleClick = () => {
-  //   console.log(1);
-  // }
   callback = (key) => {
     this.setState = {
       current: key
     }
     this.props.history.push(key)
-    //这是测试的
-    this.props.dispatch({ type: "login", user: 123 })
-    this.props.dispatch({ type: "get_user_async", userid: 1111 })
   }
 
+  componentWillMount() {
+    const { location } = this.props
+    this.state.current = location.pathname
+  }
   render() {
-    console.log("我是测试的app", this.props);
     const { current, meneList } = this.state
     return (
       <div className="App">
@@ -84,10 +83,6 @@ class App extends React.Component {
               } >
               </TabPane>)
             }
-
-            {/* <TabPane tab="Tab 1" key="1">
-              Content of Tab Pane 1
-              </TabPane> */}
           </Tabs>
         </div>
 

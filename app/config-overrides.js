@@ -17,11 +17,10 @@ module.exports = override(
     '@assets': path.resolve(__dirname, 'src/assets'),
   }), // 添加路径别名
 
-  // ui框架按需加载
   fixBabelImports('import', {
-    "libraryName": "antd",
+    "libraryName": "antd-mobile",
     "libraryDirectory": "es",
-    "style": "scss" // `style: true` 会加载 less 文件
-  }), //若是多个 ui框架 就可以在添加  },antd)
+    "style": "css" // `style: true` 会加载 scss 文件
+  }),
   useBabelRc(), //开启 .babelrc 文件
 )
