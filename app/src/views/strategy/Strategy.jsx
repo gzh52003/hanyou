@@ -1,15 +1,15 @@
 import React, { useEffect, useState, useRef } from "react"
-import { Switch, Route, NavLink } from "react-router-dom"
+import { Switch, Route, NavLink, useHistory } from "react-router-dom"
 import NavHeader from "@com/navHeader/NavHeader.jsx"
-import "@assets/strategy/strategy.scss"
+import "@assets/strategy/css/strategy.scss"
 
 import RouteWithSubRoutes from "../../components/RouteWithSubRoutes"
 import request from "@network/request"
 import straData from "@assets/strategy/strategy.json"
-import { useHistory } from "react-router-dom";
+import Ad from "@com/ad/Ad.jsx"
 
 import { BackTop } from 'antd';
-import { RightOutlined, HistoryOutlined, FireOutlined, StarOutlined, VerticalAlignTopOutlined, CloseOutlined } from '@ant-design/icons';
+import { RightOutlined, HistoryOutlined, FireOutlined, StarOutlined, VerticalAlignTopOutlined } from '@ant-design/icons';
 import AppUpdate from "./AppUpdate"
 import TT from "./Lists"
 
@@ -18,17 +18,9 @@ let straList = straData.data
 // console.log("我是攻略的data", straList);
 
 function Strategy({ routes }) {
-  //是否显示 广告
-  const isShowAd = useRef()
-  const showAd = () => {
-    isShowAd.current.className = "adActive"
-  }
   let history = useHistory();
   const goto = () => {
     history.replace("/strategy/tt")
-  }
-  const download = () => {
-    history.push("/strategy/appupdata")
   }
 
   return (
@@ -154,17 +146,9 @@ function Strategy({ routes }) {
       <BackTop>
         <div className="goback"><VerticalAlignTopOutlined className="backIcon" /> <em>顶部</em> </div>
       </BackTop>
+      {/* {广告} */}
+      <Ad />
 
-      {/* 广告 */}
-      <div className="stra_ad" ref={isShowAd}>
-        <div onClick={showAd} className="close"> <CloseOutlined className="close_icon" /> </div>
-        <img src="http://m.hanyouwang.com/statics/images/mobile/72.png" alt="" />
-        <div className="ad_box">
-          韩国旅行 找韩游 <br />
-          APP下单 门票一折起
-        </div>
-        <div className="download" onClick={download} >立即下载</div>
-      </div>
     </div >
   )
 }

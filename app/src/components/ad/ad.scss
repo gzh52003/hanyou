@@ -1,0 +1,63 @@
+  //广告
+  .stra_ad {
+    display: flex;
+    align-items: center;
+    position: relative;
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0.44rem;
+    height: .55rem;
+    width: 100%;
+    overflow: hidden;
+    background: rgba(0, 0, 0, .85);
+
+    .adActive {
+      display: none;
+    }
+
+    .close {
+      position: absolute;
+      top: -20px;
+      left: -20px;
+      width: .4rem;
+      height: .4rem;
+      background: rgba(0, 0, 0, .7);
+      border-radius: 50%;
+
+      .close_icon {
+        position: absolute;
+        bottom: .04rem;
+        right: .04rem;
+        font-size: 16px;
+        color: #fff;
+      }
+    }
+
+    img {
+      margin-left: .3rem;
+      width: .4rem;
+      height: .4rem;
+      background: orangered;
+    }
+
+    .ad_box {
+      margin: -2px 0 0 15px;
+      height: 0.42rem;
+      width: 1.3rem;
+      font-size: 14px;
+      line-height: .18rem;
+      color: #fff;
+    }
+
+    .download {
+      margin-left: .92rem;
+      width: .64rem;
+      height: .26rem;
+      line-height: .26rem;
+      text-align: center;
+      border-radius: 2px;
+      background: #e74f4f;
+      color: #fff;
+    }
+  }
