@@ -7,7 +7,6 @@ class Home extends React.Component {
   render() {
     return (
       <div>Home
-        <Button>按钮</Button>
       </div>
     )
   }

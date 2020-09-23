@@ -27,7 +27,10 @@ function Strategy({ routes }) {
   const goto = () => {
     history.replace("/strategy/tt")
   }
-  console.log("我是routers", routes);
+  const download = () => {
+    history.push("/strategy/appupdata")
+  }
+
   return (
     <div className="sta_page">
       <NavHeader className="sta_header">
@@ -160,7 +163,7 @@ function Strategy({ routes }) {
           韩国旅行 找韩游 <br />
           APP下单 门票一折起
         </div>
-        <div className="download" >立即下载</div>
+        <div className="download" onClick={download} >立即下载</div>
       </div>
     </div >
   )
