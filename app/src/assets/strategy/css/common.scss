@@ -1,0 +1,15 @@
+.str_page {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+
+  .sta_main {
+    flex: 1;
+
+    .sta_section {
+      padding: 1px 0;
+      margin: .44rem 0 .9rem 0;
+      background: #fff;
+    }
+  }
+}
