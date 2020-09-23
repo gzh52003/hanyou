@@ -14,6 +14,9 @@ import RouteWithSubRoutes from "../../components/RouteWithSubRoutes"
 //对路由配置文件
 import Home from "@views/home/Home"
 const Circle = lazy(() => import("@views/circle/Circle.jsx"))
+const Cirsearch = lazy(() => import("@views/circle/Search.jsx"))
+const Cirdetails = lazy(() => import("@views/circle/Details.jsx"))
+const Cirtopic = lazy(() => import("@views/circle/Topic.jsx"))
 const Customer = lazy(() => import("@views/customer/Customer.jsx"))
 const Profile = lazy(() => import("@views/profile/Profile.jsx"))
 const Strategy = lazy(() => import("@views/strategy/Strategy.jsx"))
@@ -30,7 +33,23 @@ const routes = [
   },
   {
     path: "/circle",
+    exact:true,
     component: Circle
+  },
+  {
+    path: "/circle/search",
+    exact:true,
+    component: Cirsearch
+  },
+  {
+    path: "/circle/topic",
+    exact:true,
+    component: Cirtopic
+  },
+  {
+    path: "/circle/details",
+    exact:true,
+    component: Cirdetails
   },
   {
     path: "/customer",

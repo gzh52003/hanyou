@@ -6,8 +6,6 @@ import '@/assets/circle/circle.scss'
 import { Tabs, WhiteSpace } from 'antd-mobile';
 import { SearchOutlined } from '@ant-design/icons';
 
-import Search from './Search'
-
 
 function Circle() {
   const cricle_list = [
@@ -96,10 +94,6 @@ function Circle() {
   }
   return (
     <div className="circle">
-      {/*路由跳转 */}
-      <Switch>
-        <Route path="/circle/search" component={Search} exact></Route>
-      </Switch>
 
       <NavHeader className="circle_header">
         <div data-p="header_l" onClick={() => { goto('/home') }}><Icon type="left" size="lg" style={{ marginTop: '5px' }} /></div>
@@ -122,7 +116,7 @@ function Circle() {
             <ul className="circle_list">
               {
                 cricle_list.map((item, idx) => {
-                  return (<li className="circle_listItem" key={item.imgUrl}>
+                  return (<li className="circle_listItem" key={item.imgUrl} onClick={() => { goto('/circle/topic') }}>
                     <a>
                       <img src={item.imgUrl} alt="" />
                       <span>{item.title}</span>
@@ -143,7 +137,7 @@ function Circle() {
             <ul className="cricle_everybody">
               {
                 cricle_everybody.map(item => {
-                  return (<li className="like_scroll" key={item.imgUrl}>
+                  return (<li className="like_scroll" key={item.imgUrl} onClick={() => { goto('/circle/details') }}>
                     <a className="like_img">
                       <img src="{item.imgUrl}" alt="" />
                     </a>
