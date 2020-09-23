@@ -8,7 +8,7 @@ const {
 const url = 'mongodb://localhost:27017';
 
 //mongo连接 数据库名称
-const dbName = 'ali-novel';
+const dbName = 'hanyou';
 
 async function connect() {
   const client = await MongoClient.connect(url); //链接数据库

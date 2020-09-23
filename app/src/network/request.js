@@ -4,7 +4,8 @@ import {
   message
 } from "antd"
 
-const baseURL = process.NODE_ENV === 'development' ? 'http://localhost:2003' : 'http://112.74.111.183:2003'
+// const baseURL = process.NODE_ENV === 'development' ? 'http://localhost:2003' : 'http://112.74.111.183:2003'
+const baseURL = 'http://localhost:2003'
 const request = axios.create({
   baseURL: baseURL + "/api",
   withCredentials: true
@@ -16,10 +17,10 @@ request.interceptors.request.use(function (config) {
   //在这块处理一些 请求拦截时的公共 部分  比如 一个发起请求的时候 需要携带token
   const state = store.getState()
   config.headers.authorization = state.user.Authorization
-  message.loading({
-    content: '努力加载中....',
-    duration: .5
-  });
+  // message.loading({
+  //   content: '努力加载中....',
+  //   duration: .5
+  // });
   return config;
 }, function (error) {
   return Promise.reject(error);
