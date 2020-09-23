@@ -1,0 +1,84 @@
+.cirsearch {
+  background-color: #fff;
+  height: 100%;
+  .am-navbar-left{
+    padding-left: 0.1rem;
+  }
+  .ipt {
+    background-color: #f6f6f6;
+    height: 0.3rem;
+    width: 3.15rem;
+    border-radius: 0.15rem;
+    padding-left: 0.42rem;
+    font-size: 14px;
+  }
+  .searchIcon{
+    position: absolute;
+    left: 0.52rem;
+  }
+
+  .search-common-title {
+    font-size: 15px;
+    font-weight: 700;
+  }
+
+  .main-content {
+    padding: 0 0.2rem 0;
+    margin-bottom: 0.1rem;
+
+    .circle_history {
+      height: 0.55rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .history_content {
+
+      span {
+        padding: 0 0.15rem;
+        background-color: #f6f6f6;
+        height: 0.28rem;
+        text-align: center;
+        line-height: 0.28rem;
+        border-radius: 0.14rem;
+        color: #333;
+        font-size: 14px;
+        max-width: 100%;
+        display: inline-block;
+        margin: 0 0.1rem 0.15rem 0;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+      }
+    }
+  }
+
+  .extra_data {
+    padding: 0 0.2rem;
+    border-bottom: 1px solid #e8edf1;
+
+    .search-common-title {
+      height: 0.55rem;
+      line-height: 0.55rem;
+    }
+
+    .hot_content {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      padding-bottom: 0.1rem;
+      // width: 100%;
+
+      span {
+        width: 50%;
+        height: 0.20rem;
+        font-size: 14px;
+        color: #333;
+        line-height: 0.20rem;
+        margin-bottom: 0.12rem;
+      }
+    }
+  }
+
+}

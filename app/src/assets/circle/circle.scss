@@ -1,8 +1,8 @@
-circle {
-  display: flex;
-  flex-direction: column;
-  height: 100%;
-}
+// circle {
+//   display: flex;
+//   flex-direction: column;
+//   height: 100%;
+// }
 
 // .circle_header {
 //   position: absolute;
@@ -15,21 +15,39 @@ circle {
 
 // 输入框
 .circle_searchBar {
-  margin-top: 0.44rem;
-}
-
-.am-search,
-.circle_searchBar {
   background-color: #fff;
+  position: relative;
+  margin-top: 0.44rem;
+  display: flex;
+  justify-content: center;
 }
 
-.am-search-input {
+.circle_input {
+  width: 90%;
+  height: 0.35rem;
   background-color: #f6f6f6;
-  font-size: 12px;
-  color: #999;
-  border-radius: 0.14rem;
-  height: 0.3rem;
+  border-radius: 0.17rem;
+  text-align: center;
 }
+.circle_search_icon{
+  position: absolute;
+  left: 1.25rem;
+  top: 0.1rem;
+}
+
+// .am-search,
+// .circle_searchBar {
+//   background-color: #fff;
+// }
+
+// .am-search-input {
+//   background-color: #f6f6f6;
+//   font-size: 12px;
+//   color: #999;
+//   border-radius: 0.14rem;
+//   height: 0.3rem;
+// }
+
 
 // 更多
 .am-card {
@@ -90,7 +108,7 @@ circle {
 
       span {
         display: inline-block;
-        // width: calc(100% - 80px);
+        width: calc(100% - 80px);
         margin-top: 0.03rem;
       }
     }
@@ -133,7 +151,6 @@ circle {
     .like_btn {
       width: 0.15rem;
       height: 0.12rem;
-      // background: #ccc;
       background-image: url('./circle_icon.png');
       // background-repeat: no-repeat;
       background-position: -0.19rem 0.43rem;
@@ -143,6 +160,9 @@ circle {
 }
 
 //tabs
-.am-tabs-default-bar-tab-active {
-  width: 0.2rem;
+// .am-tabs-default-bar-tab-active {
+//   width: 0.2rem;
+// }
+.am-tabs-content-wrap {
+  margin-top: 0.05rem;
 }
