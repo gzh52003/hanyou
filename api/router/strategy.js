@@ -14,6 +14,14 @@ router.get('/', async (req, res) => {
   res.send(result)
 })
 
+//查询列表详情 /strategy/lists
+router.get('/lists', async (req, res) => {
+  const {
+    result
+  } = await mongo.find("newslists", {}, {})
+  res.send(result)
+})
+
 // 获取单个图书的信息
 router.get('/:bookid', async (req, res) => {
   const {
