@@ -12,6 +12,7 @@ import 'antd-mobile/dist/antd-mobile.css';
 
 import Home from "@views/home/Home"
 const Circle = lazy(() => import("@views/circle/Circle.jsx"))
+const CirSearch= lazy(() => import("@views/circle/Search.jsx"))
 const Customer = lazy(() => import("@views/customer/Customer.jsx"))
 const Profile = lazy(() => import("@views/profile/Profile.jsx"))
 const Strategy = lazy(() => import("@views/strategy/Strategy.jsx"))
@@ -90,7 +91,8 @@ class App extends React.Component {
         <Suspense fallback="..." >
           <Switch>
             <Route path="/home" component={Home}></Route>
-            <Route path="/circle" component={Circle}></Route>
+            <Route path="/circle" component={Circle} exact></Route>
+            <Route path="/circle/search" component={CirSearch} exact></Route>
             <Route path="/customer" component={Customer}></Route>
             <Route path="/profile" component={Profile}></Route>
             <Route path="/strategy" component={Strategy}></Route>

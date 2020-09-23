@@ -1,14 +1,7 @@
 import React from "react"
-<<<<<<< HEAD
-
-import { Button } from 'antd-mobile';
-import 'antd-mobile/dist/antd-mobile.css';
-class Home extends React.Component {
-=======
 import "./scss/home.scss"
 import { Flex, WhiteSpace,Icon, Grid } from 'antd-mobile';
 
->>>>>>> 6676bf9345fa85ebdadc76e10d01cdd961fe86c3
 
 import { Carousel, WingBlank } from 'antd-mobile';
 class Home extends React.Component {
@@ -36,10 +29,6 @@ class Home extends React.Component {
       <div className={`${className} placeholder`} {...restProps}>111</div>
     );
     return (
-<<<<<<< HEAD
-      <div>Home
-        <Button>按钮</Button>
-=======
       <div style={{height:"1000px"}}>
         {/* 搜索框 */}
         <header className="headerbox">
@@ -224,7 +213,6 @@ class Home extends React.Component {
           今日推荐
         </div>
       </section>
->>>>>>> 6676bf9345fa85ebdadc76e10d01cdd961fe86c3
       </div>
 
       

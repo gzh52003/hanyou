@@ -11,7 +11,7 @@ const initState = {
 }
 
 function reducer(state = initState, action) {
-  console.log("我是测试的user", action);
+  // console.log("我是测试的user", action);
   switch (action.type) {
     case 'login':
       localStorage.setItem('currentUser', JSON.stringify(action.user))

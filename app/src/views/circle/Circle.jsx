@@ -1,89 +1,118 @@
 import React from "react"
+import { useHistory, Switch, Route } from "react-router-dom";
 import { SearchBar, Card, Icon } from 'antd-mobile';
 import NavHeader from "@/components/navHeader/NavHeader";
 import '@/assets/circle/circle.scss'
 import { Tabs, WhiteSpace } from 'antd-mobile';
+import { SearchOutlined } from '@ant-design/icons';
 
+import Search from './Search'
 
 
 function Circle() {
-  let goto = () => {
-    console.log(1);
-  }
   const cricle_list = [
     {
       imgUrl: 'img/circle/recommend/recommend1.jpg',
-      title: '#韩国网红打卡地#'
+      title: '#韩国网红打卡地#',
+      id: '0001'
     },
     {
       imgUrl: 'img/circle/recommend/recommend2.jpg',
-      title: '#新罗免税店#'
+      title: '#新罗免税店#',
+      id: '0002'
     },
     {
       imgUrl: 'img/circle/recommend/recommend3.webp',
-      title: '#韩国美食#'
+      title: '#韩国美食#',
+      id: '0003'
     },
     {
       imgUrl: 'img/circle/recommend/recommend4.webp',
-      title: '#韩国购物#'
+      title: '#韩国购物#',
+      id: '0004'
     }
   ];
+
   const cricle_everybody = [
     {
-      imgUrl: '555',
-      title: 'Doris'
+      imgUrl: '111',
+      title: 'Doris',
+      id: '00111'
     },
     {
       imgUrl: '666',
-      title: '笨蛋泡泡'
+      title: '笨蛋泡泡',
+      id: '00112'
     },
     {
       imgUrl: '777',
-      title: '今朝'
+      title: '今朝',
+      id: '00113'
     },
     {
       imgUrl: '999',
-      title: 'reyzhang'
+      title: 'reyzhang',
+      id: '00114'
     },
     {
       imgUrl: '888',
-      title: '海鸥免税店返点APP'
+      title: '海鸥免税店返点APP',
+      id: '00115'
     },
     {
       imgUrl: '11',
-      title: '海鸥免税店返点APP'
+      title: '海鸥免税店返点APP',
+      id: '00116'
     },
     {
       imgUrl: '22',
-      title: '笨蛋跑跑'
+      title: '笨蛋跑跑',
+      id: '00117'
     },
     {
       imgUrl: '33',
-      title: '独驴行摄'
+      title: '独驴行摄',
+      id: '00118'
     },
     {
       imgUrl: '44',
-      title: '今朝'
+      title: '今朝',
+      id: '00119'
     },
     {
       imgUrl: '55',
-      title: 'kim'
+      title: 'kim',
+      id: '00120'
     }
   ];
   const tabs = [
     { title: '动态' },
     { title: '好友' },
   ];
-
+  let history = useHistory();
+  let goto = (path) => {
+    console.log(path);
+    history.push(path)
+  }
   return (
     <div className="circle">
+      {/*路由跳转 */}
+      <Switch>
+        <Route path="/circle/search" component={Search} exact></Route>
+      </Switch>
+
       <NavHeader className="circle_header">
-        <div data-p="header_l" onClick={goto}><Icon type="left" size="lg" style={{ marginTop: '5px' }} /></div>
+        <div data-p="header_l" onClick={() => { goto('/home') }}><Icon type="left" size="lg" style={{ marginTop: '5px' }} /></div>
         <div data-p="header_c">韩游圈</div>
         <div data-p="header_r"><Icon type="ellipsis" size="md" style={{ marginTop: '10px' }} /></div>
       </NavHeader>
       <div className="circle_main">
-        <SearchBar style={{ width: '100%' }} placeholder="搜索用户和动态" maxLength={8} className="circle_searchBar" />
+        {/* <SearchBar style={{ width: '100%' }} placeholder="搜索用户和动态" maxLength={8} className="circle_searchBar" /> */}
+        <div className="circle_searchBar" onClick={() => { goto('/circle/search') }}>
+          <input type="text" placeholder="搜索用户和动态" className="circle_input" />
+          <span className="circle_search_icon"><SearchOutlined /></span>
+        </div>
+
         <Card>
           <Card.Header
             title="推荐话题"
@@ -130,15 +159,14 @@ function Circle() {
         </Card>
 
         <WhiteSpace />
-        <Tabs tabs={tabs} initialPage={2} animated={false} useOnPan={false}>
-          <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', minHeight: '250px', backgroundColor: '#fff' }}>
+        <Tabs tabs={tabs} animated={false} useOnPan={false}>
+          <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', height: '250px', backgroundColor: '#fff' }}>
             Content of first tab
-         </div>
-          <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', minHeight: '250px', backgroundColor: '#fff' }}>
+          </div>
+          <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', height: '250px', backgroundColor: '#fff' }}>
             没有更多内容了
-        </div>
+          </div>
         </Tabs>
-        <WhiteSpace />
       </div>
 
     </div>
