@@ -1,16 +1,33 @@
-import React from "react"
+import React, { useEffect, useState, useRef } from "react"
+import { Switch, Route, NavLink } from "react-router-dom"
 import NavHeader from "@com/navHeader/NavHeader.jsx"
-import "@assets/strategory/strategory.scss"
+import "@assets/strategy/strategy.scss"
 
-import { RightOutlined, HistoryOutlined, FireOutlined, StarOutlined } from '@ant-design/icons';
+import RouteWithSubRoutes from "../../components/RouteWithSubRoutes"
+import request from "@network/request"
+import straData from "@assets/strategy/strategy.json"
+import { useHistory } from "react-router-dom";
 
+import { BackTop } from 'antd';
+import { RightOutlined, HistoryOutlined, FireOutlined, StarOutlined, VerticalAlignTopOutlined, CloseOutlined } from '@ant-design/icons';
+import AppUpdate from "./AppUpdate"
+import TT from "./Lists"
 
+//拿到攻略的数据
+let straList = straData.data
+// console.log("我是攻略的data", straList);
 
-const goto = () => {
-  console.log(1);
-}
-
-function Strategy() {
+function Strategy({ routes }) {
+  //是否显示 广告
+  const isShowAd = useRef()
+  const showAd = () => {
+    isShowAd.current.className = "adActive"
+  }
+  let history = useHistory();
+  const goto = () => {
+    history.replace("/strategy/tt")
+  }
+  console.log("我是routers", routes);
   return (
     <div className="sta_page">
       <NavHeader className="sta_header">
@@ -98,51 +115,54 @@ function Strategy() {
           </div>
           {/* 主体区域 */}
           <div className="discover_content">
-            <div className="discover_content_list">
-              <dl>
-                <dt>
-                  <span></span>
-                </dt>
-                <dd>签证 · 护照</dd>
-              </dl>
-              <ul>
-                <li>
-                  <a href="###">护照</a>
-                </li>
-                <li>
-                  <a href="###">韩国签证</a>
-                </li>
-                <li>
-                  <a href="###">中国公民免签入韩介绍</a>
-                </li>
-              </ul>
-            </div>
-            <div className="discover_content_list">
-              <dl>
-                <dt>
-                  <span></span>
-                </dt>
-                <dd>签证 · 护照</dd>
-              </dl>
-              <ul>
-                <li>
-                  <a href="###">护照</a>
-                </li>
-                <li>
-                  <a href="###">韩国签证</a>
-                </li>
-                <li>
-                  <a href="###">中国公民免签入韩介绍</a>
-                </li>
-              </ul>
-            </div>
+            {
+              straList.map((item, idx) => {
+                return (
+                  <div className="discover_content_list" key={item.id}>
+                    <dl>
+                      {
+                        idx <= 3 ? <dt style={{ backgroundPosition: `0 ${-0.46 * idx}rem ` }}></dt> :
+                          <dt style={{ backgroundPosition: `0.56rem ${-0.46 * (idx - 4)}rem` }}></dt>
+                      }
+                      <dd>{item.mainCon.name}</dd>
+                    </dl>
+                    <ul>
+                      {
+                        item.straList.map(items => {
+                          return (
+                            // 点击事件
+                            <li key={items.InfoLink}  >
+                              {items.InfoLink}
+                            </li>
+                          )
+                        })
+                      }
+                    </ul>
+                  </div>
+                )
+              })
+            }
           </div>
 
-
-          {/* sta_section 结束 */}
         </div>
+        {/* sta_section 结束 */}
       </div>
-    </div>
+      {/* 返回顶部 */}
+      <BackTop>
+        <div className="goback"><VerticalAlignTopOutlined className="backIcon" /> <em>顶部</em> </div>
+      </BackTop>
+
+      {/* 广告 */}
+      <div className="stra_ad" ref={isShowAd}>
+        <div onClick={showAd} className="close"> <CloseOutlined className="close_icon" /> </div>
+        <img src="http://m.hanyouwang.com/statics/images/mobile/72.png" alt="" />
+        <div className="ad_box">
+          韩国旅行 找韩游 <br />
+          APP下单 门票一折起
+        </div>
+        <div className="download" >立即下载</div>
+      </div>
+    </div >
   )
 }
 
