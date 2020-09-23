@@ -1,9 +1,9 @@
 import React from "react"
 import "./scss/home.scss"
-import { Flex, WhiteSpace,Icon, Grid } from 'antd-mobile';
+import { Flex, WhiteSpace,Icon, Grid,Button, List } from 'antd-mobile';
 
 
-import { Carousel, WingBlank } from 'antd-mobile';
+import { Carousel, WingBlank} from 'antd-mobile';
 class Home extends React.Component {
   state = {
     data: ['3', '4', '5'],
@@ -29,7 +29,7 @@ class Home extends React.Component {
       <div className={`${className} placeholder`} {...restProps}>111</div>
     );
     return (
-      <div style={{height:"1000px"}}>
+      <div style={{height:"2000px"}}>
         {/* 搜索框 */}
         <header className="headerbox">
           <div className="header-con">
@@ -207,12 +207,93 @@ class Home extends React.Component {
       </ul>
     </section>
     
-      <section className="home_parts">
+      <section className="home_parts home_parts1">
+        <div>
         <i className="tit t1" style={{backgroundImage:`url(./img/home/home-title-merge.png)`}}></i>
         <div className="home_titles">
           今日推荐
         </div>
+        </div>
+        <ul className="clear_fix" style={{margin:"3px"}}>
+          <li><a href=""><img src="img/home/home8.png" alt=""/></a></li>
+          <li><a href=""><img src="img/home/home9.jpg" alt=""/></a></li>
+          <li><a href=""><img src="img/home/home10.jpg" alt=""/></a></li>
+          <li><a href=""><img src="img/home/home11.png" alt=""/></a></li>
+          <li><a href=""><img src="img/home/home12.jpg" alt=""/></a></li>
+        </ul>
       </section>
+
+      <section className="home_parts home_parts2">
+        <div className="home_parts_tit">
+        <i className="tit t2" style={{backgroundImage:`url(./img/home/home-title-merge.png)`}}></i>
+        <div className="home_titles">
+          特惠产品
+        </div>
+        <div className="home_parts_tits">
+        <a href="">更多</a>
+        <Icon type={"right"}  className="iconRight" size={"xs"}/>
+        </div>
+        </div>
+        <ul className="clear_fix homeul" style={{margin:"3px"}}>
+          <li>
+            <div style={{backgroundImage:`url(./img/home/home13.jpg)`}} className="home_parts2_div1">
+            </div>
+            <div className="home_parts2_div2">
+              <h2>爱宝乐园+往返大巴</h2>
+              <span>CNY255.00</span>
+            </div>
+         </li>
+         <li>
+            <div style={{backgroundImage:`url(./img/home/home14.jpg)`}} className="home_parts2_div1">
+            </div>
+            <div className="home_parts2_div2">
+              <h2>乱打秀双人票</h2>
+              <span>CNY425.00</span>
+            </div>
+         </li>
+        
+       
+        </ul>
+      </section>
+
+      <section className="home_parts home_parts3">
+        <div className="home_parts_tit">
+        <i className="tit t3" style={{backgroundImage:`url(./img/home/home-title-merge.png)`}}></i>
+        <div className="home_titles">
+          精彩专题
+        </div>
+        <div className="home_parts_tits">
+        <a href="">更多</a>
+        <Icon type={"right"}  className="iconRight" size={"xs"}/>
+        </div>
+        </div>
+        <ul className="clear_fix homeul">
+       <dl>
+         <dt><img src="./img/home/home15.jpg" alt=""/></dt>
+         <dd>春季京畿道2020-京畿道热门景点</dd>
+       </dl>
+       <dl>
+         <dt><img src="./img/home/home16.jpg" alt=""/></dt>
+         <dd>韩国滑雪攻略_韩国冬季旅游攻略_韩国滑雪场门票</dd>
+       </dl>
+       <dl>
+         <dt><img src="./img/home/home17.jpg" alt=""/></dt>
+         <dd>大学生冬季专题</dd>
+       </dl>
+        </ul>
+      </section>
+      <section className="home_parts home_parts4">
+        <div className="home_parts_tit">
+        <i className="tit t4" style={{backgroundImage:`url(./img/home/home-title-merge.png)`}}></i>
+        <div className="home_titles">
+          发现更多精彩
+        </div>
+        </div>
+        </section>
+
+
+        {/* 长列表 */}
+        
       </div>
 
       
