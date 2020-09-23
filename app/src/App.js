@@ -70,7 +70,6 @@ class App extends React.Component {
   //   this.state.current = location.pathname
   // }
   render() {
-    // const { current, meneList } = this.state
     return (
       <div className="App">
         <Suspense fallback={<div>loading</div>}>
