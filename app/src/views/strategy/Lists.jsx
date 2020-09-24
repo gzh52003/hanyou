@@ -1,5 +1,5 @@
 import React, { useEffect, useState, useRef } from "react";
-// import { } from "react-router-dom"
+import { useHistory, useLocation } from "react-router-dom"
 import "@assets/strategy/css/common.scss"
 import "@assets/strategy/css/List.scss"
 
@@ -21,6 +21,10 @@ const navLists = [
 ];
 
 function Lists() {
+  // const history = useHistory()
+  // const goback = () => {
+  //   history.goBack()
+  // }
 
   //查询所有数据
   const [newsList, setDate] = useState([]);
@@ -47,9 +51,7 @@ function Lists() {
   return (
     <div className="str_page sta_list">
       <NavHeader className="sta_header">
-        <div data-p="header_l" >左侧</div>
-        <div data-p="header_c">中间</div>
-        <div data-p="header_r">右侧</div>
+        <div data-p="header_c">咨询</div>
       </NavHeader>
 
       <div className="sta_main">

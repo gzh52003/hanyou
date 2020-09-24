@@ -9,6 +9,7 @@
   text-align: center;
   background-color: #fff;
   z-index: 9;
+  font-size: 18px;
 
   .line {
     position: absolute;
@@ -22,9 +23,9 @@
 
   .header_l,
   .header_r {
+    font-size: 20px;
     width: .44rem;
     height: .44rem;
-    background: pink;
   }
 
   .header_c {
@@ -33,4 +34,33 @@
     height: .44rem;
   }
 
+  .header_r {
+    position: relative;
+  }
+
+  .show-box {
+    display: flex;
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    right: 4px;
+    top: .44rem;
+    width: 1.14rem;
+    height: 1.11rem;
+    background: rgba(0, 0, 0, .7);
+    border-radius: 4px;
+    padding: 0 10px;
+    color: #fff;
+    transition: .7s;
+
+    li {
+      font-size: 14px;
+      height: 36px;
+    }
+
+  }
+
+  .showAvtive {
+    display: block;
+  }
 }

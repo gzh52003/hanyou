@@ -11,7 +11,6 @@ import Ad from "@com/ad/Ad.jsx"
 import { BackTop } from 'antd';
 import { RightOutlined, HistoryOutlined, FireOutlined, StarOutlined, VerticalAlignTopOutlined } from '@ant-design/icons';
 import AppUpdate from "./AppUpdate"
-import TT from "./Lists"
 
 //拿到攻略的数据
 let straList = straData.data
@@ -19,20 +18,19 @@ let straList = straData.data
 
 function Strategy({ routes }) {
   let history = useHistory();
-  const goto = () => {
-    history.replace("/strategy/tt")
-  }
 
   const goToList = () => {
     history.push("/strategy/lists")
   }
 
+  const gotoShow = (id) => {
+    history.push("/strategy/newsshow/" + id)
+  }
+
   return (
     <div className="sta_page">
       <NavHeader className="sta_header">
-        <div data-p="header_l" onClick={goto}>左侧</div>
-        <div data-p="header_c">中间</div>
-        <div data-p="header_r">右侧</div>
+        <div data-p="header_c">攻略</div>
       </NavHeader>
       <div className="sta_main">
         <div className="sta_section">
@@ -69,12 +67,12 @@ function Strategy({ routes }) {
           {/* 大家知道 */}
           <div className="discover_know">
             <div className="discover_know_title">
-              <a href="###">
+              <p>
                 <span>
                   <StarOutlined />  大家都知道
                   </span>
-                <span className="more">更多 <RightOutlined /></span>
-              </a>
+                <span className="more" onClick={goToList}>更多 <RightOutlined /></span>
+              </p>
               <div className="discover_know_card">
                 <ul>
                   <li>
@@ -130,7 +128,7 @@ function Strategy({ routes }) {
                         item.straList.map(items => {
                           return (
                             // 点击事件
-                            <li key={items.InfoLink}  >
+                            <li key={items.InfoLink} onClick={() => { gotoShow(items.id) }} >
                               {items.InfoLink}
                             </li>
                           )
