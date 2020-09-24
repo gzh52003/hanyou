@@ -12,13 +12,14 @@
         width: 0.33rem;
         height: 0.33rem;
         display: block;
+        border-radius: 0.16rem;
       }
     }
 
     p {
-      width: 0.8rem;
-      // height: 0.3rem;
-      // background: #ccc;
+      width: 2rem;
+      text-align: left;
+      padding-left: 0.1rem;
     }
   }
 
@@ -40,8 +41,13 @@
   .slideshow {
     margin-top: 0.44rem;
     width: 100%;
-    height: 4.5rem;
-    background: #ccc;
+
+    // height: 2.5rem;
+    // background: #ccc;
+    img {
+      width: 100%;
+      height: 3rem;
+    }
   }
 
   .pd5px {
@@ -91,6 +97,7 @@
       img {
         width: 0.24rem;
         height: 0.24rem;
+        border-radius: 0.12rem;
         display: block;
         margin-right: 0.05rem;
       }
@@ -124,6 +131,159 @@
   }
 
   .comment {
-    height: 4rem;
+    // height: 1rem;
+
+    .comment_title {
+      height: 0.4rem;
+      position: relative;
+      span{
+        display: inline-block;
+        line-height: 0.4rem;
+        padding-left: 0.25rem;
+        padding-top: 0.06rem;
+      }
+
+      &::before {
+        content: '';
+        position: absolute;
+        width: 4px;
+        height: 16px;
+        background: #3ecac2;
+        left: 15px;
+        top: 19px;
+        border-radius: 2px;
+      }
+    }
+
+    .comment_content{
+      display: flex;
+      // padding: 0.1rem;
+      .comment_item{
+        padding: 0.1rem;
+        width: 100%;
+        height: 1rem;
+      }
+      .left{
+        width: 0.5rem;
+        height: 0.33rem;
+        padding-left: 0.2rem;
+        img{
+          width: 0.33rem;
+          height: 0.33rem;
+          border-radius: 50%;
+          display: block;
+        }
+      }
+      .right{
+        margin-left: 0.1rem;
+        margin-top: 0.05rem;
+        .u_info{
+          height: 0.2rem;
+          line-height: 0.2rem;
+          span{
+            &:nth-child(1){
+              font-size: 15px;
+              margin-right: 0.2rem;
+            }
+            &:nth-child(2){
+              display: inline-block;
+              width: 0.5rem;
+              text-align: center;
+              border-radius: 0.2rem;
+              background-color:#3ecac2;
+              color: #fff;
+              font-size: 15px;
+              margin-right: 0.2rem;
+            }
+          }
+        }
+        .public_time{
+          height: 0.3rem;
+          line-height: 0.3rem;
+        }
+      }
+    }
+  }
+
+  .circle_waterfall {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100%;
+
+    li {
+      // height: 0.5rem;
+      width: 47%;
+      background: #fff;
+      margin-bottom: 0.05rem;
+
+      .dynamic_img {
+        // width: 100px;
+        height: 2.13rem;
+
+        img {
+          width: 100%;
+          height: 100%;
+        }
+      }
+
+      .dynamic_info {
+        height: 1rem;
+        position: relative;
+
+        .content {
+          text-overflow: -o-ellipsis-lastline;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          display: -webkit-box;
+          -webkit-line-clamp: 2;
+          line-clamp: 2;
+          -webkit-box-orient: vertical;
+        }
+
+        .bottom {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          position: absolute;
+          bottom: 0.1rem;
+          width: 90%;
+          margin-left: 5%;
+
+          .left {
+            display: flex;
+
+            .avatar img {
+              width: 0.24rem;
+              height: 0.24rem;
+              border-radius: 0.12rem;
+            }
+
+            .username {
+              text-align: center;
+              line-height: 0.24rem;
+            }
+          }
+
+          .right {
+            &::before {
+              display: inline-block;
+              margin-right: 5px;
+              width: 15px;
+              height: 13px;
+              background-image: url(./circle_icon.png);
+              background-repeat: no-repeat;
+              background-size: auto 16px;
+              content: '';
+              background-position: -13px 0;
+              position: relative;
+              top: 2px;
+
+            }
+          }
+        }
+      }
+    }
   }
 }

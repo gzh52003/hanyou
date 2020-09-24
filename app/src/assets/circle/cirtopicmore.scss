@@ -1,0 +1,36 @@
+.topicmore{
+  background: #fff;
+  height: 100%;
+  .topic_search{
+    margin-top: 0.44rem;
+    height: 0.4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+ 
+    input{
+      margin-top: 0.05rem;
+      width: 90%;
+      height: 0.35rem;
+      border-radius: 0.18rem;
+      background: #f1f1f1;
+      text-align: center;
+      line-height: 0.3rem;
+    }
+  }
+  .search_content{
+    .search_list{
+      padding: 0 0.2rem;
+    }
+    .search_item{
+      height: 0.42rem;
+      line-height: 0.42rem;
+      border-bottom: 1px solid #eee;
+      span{
+        font-size: #000;
+      }
+      
+    }
+  }
+}

@@ -17,6 +17,7 @@ const Circle = lazy(() => import("@views/circle/Circle.jsx"))
 const Cirsearch = lazy(() => import("@views/circle/Search.jsx"))
 const Cirdetails = lazy(() => import("@views/circle/Details.jsx"))
 const Cirtopic = lazy(() => import("@views/circle/Topic.jsx"))
+const Cirtopicmore = lazy(() => import("@views/circle/Topicmore.jsx"))
 const Customer = lazy(() => import("@views/customer/Customer.jsx"))
 const Profile = lazy(() => import("@views/profile/Profile.jsx"))
 const Strategy = lazy(() => import("@views/strategy/Strategy.jsx"))
@@ -42,12 +43,17 @@ const routes = [
     component: Cirsearch
   },
   {
-    path: "/circle/topic",
+    path: "/circle/topic/:id",
     exact:true,
     component: Cirtopic
   },
   {
-    path: "/circle/details",
+    path: "/circle/topicmore",
+    exact:true,
+    component: Cirtopicmore
+  },
+  {
+    path: "/circle/details/:id",
     exact:true,
     component: Cirdetails
   },

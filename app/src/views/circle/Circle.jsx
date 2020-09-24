@@ -14,22 +14,22 @@ function Circle() {
     {
       imgUrl: 'img/circle/recommend/recommend1.jpg',
       title: '#韩国网红打卡地#',
-      id: '0001'
+      id: '149'
     },
     {
       imgUrl: 'img/circle/recommend/recommend2.jpg',
-      title: '#新罗免税店#',
-      id: '0002'
+      title: '#韩国美食#',
+      id: '19'
     },
     {
       imgUrl: 'img/circle/recommend/recommend3.webp',
-      title: '#韩国美食#',
-      id: '0003'
+      title: '#新罗免税店#',
+      id: '35'
     },
     {
       imgUrl: 'img/circle/recommend/recommend4.webp',
       title: '#韩国购物#',
-      id: '0004'
+      id: '11'
     }
   ];
 
@@ -37,52 +37,52 @@ function Circle() {
     {
       imgUrl: 'http://oss.hanyouwang.com/pic/20191023/15717963149907726497.jpg',
       title: 'Doris',
-      id: '00111'
+      id: '701'
     },
     {
       imgUrl: 'http://oss.hanyouwang.com/pic/20190917/oss_1568707217_687616330.jpg',
       title: '笨蛋泡泡',
-      id: '00112'
+      id: '1'
     },
     {
       imgUrl: 'http://oss.hanyouwang.com/pic/20190930/15698093916309432118.jpg',
       title: '今朝',
-      id: '00113'
+      id: '631'
     },
     {
       imgUrl: 'http://oss.hanyouwang.com/pic/20190917/15687099566125624464.jpg',
       title: 'reyzhang',
-      id: '00114'
+      id: '2'
     },
     {
       imgUrl: 'http://oss.hanyouwang.com/pic/20191120/15742154016731349806.jpg',
       title: '海鸥免税店返点APP',
-      id: '00115'
+      id: '779'
     },
     {
       imgUrl: 'http://oss.hanyouwang.com/pic/20190920/15689431912826821092.jpg',
       title: '海鸥免税店返点APP',
-      id: '00116'
+      id: '786'
     },
     {
       imgUrl: 'http://oss.hanyouwang.com/pic/20191121/15743227769724085919.jpg',
       title: '笨蛋跑跑',
-      id: '00117'
+      id: '531'
     },
     {
       imgUrl: 'http://oss.hanyouwang.com/pic/20200807/oss_159678585686338662578.jpg',
       title: '独驴行摄',
-      id: '00118'
+      id: '1062'
     },
     {
       imgUrl: 'http://oss.hanyouwang.com/pic/20191205/15755154209363355604.jpg',
       title: '今朝',
-      id: '00119'
+      id: '827'
     },
     {
       imgUrl: 'http://oss.hanyouwang.com/pic/20191104/1572866087555926517.jpg',
       title: 'kim',
-      id: '00120'
+      id: '741'
     }
   ];
 
@@ -109,7 +109,7 @@ function Circle() {
       // You can await here
       const data = await request.get('/circle')
       // 把获取到的数据 赋值给data，useState中定义的data
-      console.log(data[0].data)
+      // console.log(data[0].data)
       changeData(data[0].data)
     }
     fetchData();
@@ -132,13 +132,13 @@ function Circle() {
         <Card>
           <Card.Header
             title="推荐话题"
-            extra={<span className="circle_more">更多<Icon type="right" /></span>}
+            extra={<span className="circle_more" onClick={()=>{goto('/circle/topicmore')}}>更多<Icon type="right" /></span>}
           />
           <Card.Body>
             <ul className="circle_list">
               {
                 cricle_list.map((item, idx) => {
-                  return (<li className="circle_listItem" key={item.imgUrl} onClick={() => { goto('/circle/topic') }}>
+                  return (<li className="circle_listItem" key={item.imgUrl} onClick={() => { goto('/circle/topic/'+item.id) }}>
                     <a>
                       <img src={item.imgUrl} alt="推荐" />
                       <span>{item.title}</span>
@@ -159,7 +159,7 @@ function Circle() {
             <ul className="cricle_everybody">
               {
                 cricle_everybody.map(item => {
-                  return (<li className="like_scroll" key={item.imgUrl} onClick={() => { goto('/circle/details') }}>
+                  return (<li className="like_scroll" key={item.imgUrl} onClick={() => { goto('/circle/details/'+item.id); }}>
                     <a className="like_img">
                       <img src={item.imgUrl} alt="晒图" />
                     </a>
@@ -179,7 +179,7 @@ function Circle() {
           <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', backgroundColor: '#f3f3f3' }}>
             <ul className="circle_waterfall">
               {
-                data.map(item => <li key={item.id}>
+                data.map(item => <li key={item.id} onClick={() => { goto('/circle/details/'+item.id) }}>
                   <div className="dynamic_img"><img src={item.cover_pic} alt="" /></div>
                   <div className="dynamic_info">
                     <p className="content">{item.content}</p>
