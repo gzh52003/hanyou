@@ -98,7 +98,6 @@ function Lists() {
 
 // 子组件
 function NavItems({ conItem, currentIdx, idx }) {
-  // console.log("conItem=", conItem);
   return (
     <div className="nav_items">
       <ul>
