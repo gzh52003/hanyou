@@ -4,7 +4,10 @@
 /node_modules
 /.pnp
 .pnp.js
+<<<<<<< HEAD
 jspm_packages/
+=======
+>>>>>>> dev-xzl
 
 # testing
 /coverage

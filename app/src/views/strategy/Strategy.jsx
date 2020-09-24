@@ -23,6 +23,10 @@ function Strategy({ routes }) {
     history.replace("/strategy/tt")
   }
 
+  const goToList = () => {
+    history.push("/strategy/lists")
+  }
+
   return (
     <div className="sta_page">
       <NavHeader className="sta_header">
@@ -34,7 +38,7 @@ function Strategy({ routes }) {
         <div className="sta_section">
           {/* 新闻发现 */}
           <div className="discover_new">
-            <div className="more">更多 <RightOutlined /></div>
+            <div className="more" onClick={goToList} >更多 <RightOutlined /></div>
             <div className="discover_con">
               <a href="###">
                 <dl>
