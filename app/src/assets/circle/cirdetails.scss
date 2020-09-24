@@ -1,0 +1,129 @@
+.cirdetails {
+  background: #fff;
+  height: 100%;
+
+  .details_cen {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+
+    .name {
+      img {
+        width: 0.33rem;
+        height: 0.33rem;
+        display: block;
+      }
+    }
+
+    p {
+      width: 0.8rem;
+      // height: 0.3rem;
+      // background: #ccc;
+    }
+  }
+
+  .header_r {
+    position: relative;
+    // margin-top: 0.2rem;
+    background-color: #ddf3eb;
+    font-size: 14px;
+    color: #11d28d;
+    width: 0.7rem;
+    height: 0.26rem;
+    border-radius: 0.14rem;
+    line-height: 0.26rem;
+    top: 0.1rem;
+    right: 0.2rem;
+  }
+
+
+  .slideshow {
+    margin-top: 0.44rem;
+    width: 100%;
+    height: 4.5rem;
+    background: #ccc;
+  }
+
+  .pd5px {
+    padding: 0.05rem 0.15rem;
+  }
+
+  .des {
+    font-size: 0.15rem;
+    line-height: 0.25rem;
+  }
+
+  .tags {
+    span {
+      display: inline-block;
+      background-color: #f0fbfa;
+      font-size: 13px;
+      color: #11d28d;
+      height: 0.24rem;
+      line-height: 0.24rem;
+      padding: 0 10px;
+      border-radius: 0.12rem;
+      margin-right: 0.05rem;
+    }
+  }
+
+  // .address {
+
+  // }
+
+  .time {
+    span {
+      margin-right: 0.1rem;
+    }
+  }
+
+  .like_content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 0.5rem;
+    padding: 0.1rem 0.15rem;
+
+    .like_left {
+      width: 50%;
+      display: flex;
+
+      img {
+        width: 0.24rem;
+        height: 0.24rem;
+        display: block;
+        margin-right: 0.05rem;
+      }
+
+    }
+
+    .like_right {
+      width: 50%;
+      text-align: right;
+      line-height: 0.5rem;
+
+      span {
+        &:nth-child(1) {
+          display: inline-block;
+          width: 21px;
+          height: 47px;
+          background-image: url('./circle_icon.png');
+          background-repeat: no-repeat;
+          background-position: -24px 31px;
+          background-size: 140px 22px;
+        }
+      }
+
+    }
+  }
+
+  .space {
+    width: 100%;
+    height: 0.1rem;
+    background-color: #f1f1f1;
+  }
+
+  .comment {
+    height: 4rem;
+  }
+}
