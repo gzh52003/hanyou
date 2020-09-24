@@ -20,9 +20,12 @@ const Cirtopic = lazy(() => import("@views/circle/Topic.jsx"))
 const Cirtopicmore = lazy(() => import("@views/circle/Topicmore.jsx"))
 const Customer = lazy(() => import("@views/customer/Customer.jsx"))
 const Profile = lazy(() => import("@views/profile/Profile.jsx"))
+
+//对Strategy类的路由
 const Strategy = lazy(() => import("@views/strategy/Strategy.jsx"))
-const AppUpdate = lazy(() => import("@views/strategy/AppUpdate"))
-const Lists = lazy(() => import("@views/strategy/Lists"))
+const AppUpdate = lazy(() => import("@views/strategy/AppUpdate.jsx"))
+const Lists = lazy(() => import("@views/strategy/Lists.jsx"))
+const NewsShow = lazy(() => import("@views/strategy/NewsShow.jsx"))
 
 const { TabPane } = Tabs;
 
@@ -82,6 +85,11 @@ const routes = [
     path: "/strategy/appupdata",
     exact: true,
     component: AppUpdate
+  },
+  {
+    path: "/strategy/newsshow/:id",
+    exact: true,
+    component: NewsShow
   },
   {
     path: "/profile",
