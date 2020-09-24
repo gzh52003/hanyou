@@ -81,7 +81,7 @@ const routes = [
     component: AppUpdate
   },
   {
-    path: "/strategy/newsshow",
+    path: "/strategy/newsshow/:id",
     exact: true,
     component: NewsShow
   },
