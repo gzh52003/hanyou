@@ -30,7 +30,7 @@ export default function Topicmore() {
     <div className="topicmore">
       <NavHeader className="circle_header">
         <div data-p="header_l" onClick={() => { goto('/circle') }}><Icon type="left" size="lg" style={{ marginTop: '5px' }} /></div>
-        <div data-p="header_c">推荐话题</div>
+        <div data-p="header_c">#推荐话题</div>
         <div data-p="header_r"><Icon type="ellipsis" size="md" style={{ marginTop: '10px' }} /></div>
       </NavHeader>
       <div className="topic_search">
