@@ -26,6 +26,9 @@ const Strategy = lazy(() => import("@views/strategy/Strategy.jsx"))
 const AppUpdate = lazy(() => import("@views/strategy/AppUpdate.jsx"))
 const Lists = lazy(() => import("@views/strategy/Lists.jsx"))
 const NewsShow = lazy(() => import("@views/strategy/NewsShow.jsx"))
+const AppUpdate = lazy(() => import("@views/strategy/AppUpdate"))
+const Lists = lazy(() => import("@views/strategy/Lists"))
+const HomePage = lazy(() => import("@views/home/HomePage.jsx"))
 
 const { TabPane } = Tabs;
 
@@ -33,7 +36,13 @@ const { TabPane } = Tabs;
 const routes = [
   {
     path: "/home",
+    exact: true,
     component: Home
+  },
+  {
+    path: "/home/homepage/:id",
+    // exact: true,
+    component: HomePage
   },
   {
     path: "/circle",
