@@ -15,6 +15,8 @@ const session = require('express-session');
 
 //关于韩游的接口
 const strategy = require("./strategy")
+// 关于韩游首页的接口
+const homeRouter = require("./home");
 
 const {
   formatData
@@ -54,5 +56,7 @@ router.get("/jwtverify", (req, res) => {
 
 //关于韩游网的接口
 router.use("/strategy", strategy)
+// 关于韩游首页的接口
+router.use("/home",homeRouter)
 
 module.exports = router;

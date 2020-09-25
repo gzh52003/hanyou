@@ -441,9 +441,121 @@
     background-color: #f5f5f9;
     .home_titles{
         color: #faa528;
+        border: 0;
     }
     .t4{
         background-position: -45px 0;
         left: 125px;
+    }
+}
+.am-tabs-default-bar-underline{
+    border: 0;
+}
+// 选项卡
+// .tabs #m-tabs-0-0{
+//     margin: 10px 50px;
+// }
+// .tabs #m-tabs-0-1{
+//     margin: 10px 0;
+// }
+// .tabs #m-tabs-0-0,#m-tabs-0-1{
+//     width: 30%!important;
+//     // background-color: #2ebd59;
+//     font-size: 12px;
+//     color: #333;
+//     height: 30px;
+//     line-height: 30px;
+//     text-align: center;
+//     border-radius: 15px;
+//     background-color: #e8e8e8;
+// }
+// .tabs .tabs1{
+//     .am-tabs-default-bar-tab{
+//         width: 25%!important;
+//     }
+// }
+
+.tab_box .hide{
+    display: none;
+}
+.tabMenu .selected{
+    color: red;
+}
+.menuli li{
+    float: left;
+    width: 50%;
+    text-align: center;
+    span{
+        display: block;
+        width: 112px;
+        height: 30px;
+        line-height: 30px;
+        text-align: center;
+        border-radius: 15px;
+        font-size: 12px;
+        margin: 0 auto;
+        background-color: #e8e8e8;
+        color: #333;
+    }
+    .highColor{
+        background-color: #2ebd59;
+        color: #fff;
+    }
+}
+
+
+.tab_box .hide1{
+    display: none;
+}
+// .tabMenu .selected1{
+//     color: red;
+// }
+#tabsub1 .menuli1 li{
+    float: left;
+    span{
+        display: block;
+        width: 86px;
+        height: 30px;
+        line-height: 30px;
+        text-align: center;
+        border-radius: 2px;
+        border: #eee solid 1px;
+        font-size: 12px;
+        margin: 0 auto;
+        background-color: #fff;
+        color: #333;
+        margin-right: 5px;
+        margin-bottom: 10px;
+    }
+    .highColor1{
+        border-color: #9dd000;
+        color: #9dd000;
+    }
+}
+.menuli1{
+ padding: 15px 5px 10px;
+ margin-top: 10px;
+ border-top: #eee solid 2px;
+}
+#tabsub2 .menuli1 li{
+    float: left;
+    span{
+        display: block;
+        width: 86px;
+        height: 30px;
+        line-height: 30px;
+        text-align: center;
+        border-radius: 2px;
+        border: #eee solid 1px;
+        font-size: 12px;
+        margin: 0 auto;
+        background-color: #fff;
+        color: #333;
+        margin-right: 5px;
+        margin-bottom: 10px;
+    }
+    .highColor1{
+        border-color: #9dd000;
+        color: #9dd000;
     }
 }
